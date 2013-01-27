@@ -40,5 +40,8 @@
 (setq split-height-threshold nil)
 (setq split-width-threshold nil)
 
+;; Turn off bell alarms
+(setq ring-bell-function 'ignore)
+
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
