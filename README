@@ -1,0 +1,12 @@
+Aviram's emacs definitions
+==========================
+
+Emacs definitions tested on emacs23 (23.4.1, to be exact).
+
+These definitions should not work "out of the box", as there are Emacs lisp
+packages that are not default and are not found in. These packages should be
+installed manually.  Review the file init.el and see which packages you don't
+have, and install them. Usually in Ubuntu these are available with apt-get,
+for example:
+    apt-get install git-el
+will install git mode for Emacs.
