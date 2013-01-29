@@ -3,6 +3,7 @@
 ;;
 
 (require 'user-macros)
+(require 'custom-functions)
 
 (global-set-key "\C-xc" 'save-buffers-kill-emacs)
 
@@ -62,5 +63,7 @@
 ;; Smarter shell completion
 (define-key shell-mode-map [(control up)] 'comint-previous-matching-input-from-input)
 (define-key shell-mode-map [(control down)] 'comint-next-matching-input-from-input)
+
+(global-set-key "\M-\\" 'shell-command-on-region-inplace)
 
 (provide 'keys)
