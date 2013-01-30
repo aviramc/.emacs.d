@@ -27,6 +27,7 @@
 (require 'newshell)
 (require 'lua-mode)
 (require 'git)
+(require 'internet-search)
 
 (ido-mode t)
 (font-lock-mode)

@@ -66,4 +66,6 @@
 
 (global-set-key "\M-\\" 'shell-command-on-region-inplace)
 
+(global-set-key (kbd "C-c s") 'search-in-internet)
+
 (provide 'keys)
