@@ -82,4 +82,9 @@
 (eval-after-load "diff-mode"
   '(update-diff-colors))
 
+;; Don't ask before killing a buffer with a running process.
+;; This list holds hooks to run before killing a buffer, and it has originally contained only process-kill-buffer-query-function.
+;; In order to restore the default, remove this line or replace it with: (setq kill-buffer-query-functions 'process-kill-buffer-query-function)
+(setq kill-buffer-query-functions nil)
+
 (provide 'settings)
