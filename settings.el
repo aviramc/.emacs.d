@@ -70,4 +70,16 @@
 (global-set-key [(control x) (control c)] (defun dont-kill-emacs() (interactive) (message "Use C-x c to leave emacs")))
 (global-set-key [(control x) c] 'save-buffers-kill-emacs)
 
+;; Colors displayed by diff mode.
+(defun update-diff-colors ()
+  "update the colors for diff faces"
+  (set-face-attribute 'diff-added nil
+                      :foreground "white" :background "darkgreen")
+  (set-face-attribute 'diff-removed nil
+                      :foreground "white" :background "darkred")
+  (set-face-attribute 'diff-changed nil
+                      :foreground "white" :background "purple"))
+(eval-after-load "diff-mode"
+  '(update-diff-colors))
+
 (provide 'settings)

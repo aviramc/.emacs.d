@@ -19,7 +19,7 @@ The prefix number ARG indicates the Search URL to use. By default the search URL
   (let ((query                          ; Set the search query first.
     (if (region-active-p)
       (buffer-substring (region-beginning) (region-end))
-    (read-from-minibuffer "Search for: ")))
+    (read-from-minibuffer "Search the Web for: ")))
 
   ;; Now get the Base URL to use for the search
   (baseurl (nth (1- arg) *internet-search-urls*)))
