@@ -68,4 +68,6 @@
 
 (global-set-key (kbd "C-c s") 'search-in-internet)
 
+(global-set-key (kbd "C-c r") 'revert-buffer)
+
 (provide 'keys)
