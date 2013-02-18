@@ -67,6 +67,7 @@
 (global-set-key "\M-\\" 'shell-command-on-region-inplace)
 
 (global-set-key (kbd "C-c s") 'search-in-internet)
+(global-set-key (kbd "C-c b") 'browse-url)
 
 (global-set-key (kbd "C-c r") 'revert-buffer)
 
