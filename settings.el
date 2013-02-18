@@ -48,6 +48,10 @@
 ;; Run "xlsfonts | grep courier-medium-r" to view available fonts
 (set-default-font "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1")
 
+;; Set the default font for new frames. This is helpful when doing new-frame[-on-display] or when running emacsclient.
+(add-to-list 'default-frame-alist
+             '(font . "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1"))
+
 ;; Shell mode
 (setq ansi-color-names-vector ; better contrast colors
       ["black" "orangered" "green4" "yellow4"
