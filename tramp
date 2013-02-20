@@ -32,4 +32,6 @@
   ("local-decoding" base64-decode-region)
   ("remote-encoding" "base64")
   ("remote-decoding" "base64 -d -i")
-  ("~root" "/root")))
+  ("~root" "/root")
+  ("inline-compress" "gzip")
+  ("inline-decompress" "gzip -d")))
