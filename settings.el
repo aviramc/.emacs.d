@@ -92,4 +92,8 @@
 ;; In order to restore the default, remove this line or replace it with: (setq kill-buffer-query-functions 'process-kill-buffer-query-function)
 (setq kill-buffer-query-functions nil)
 
+;; Set google-chrome as the default browser.
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome")
+
 (provide 'settings)
