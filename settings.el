@@ -91,4 +91,7 @@
 ;; In order to restore the default, remove this line or replace it with: (setq kill-buffer-query-functions 'process-kill-buffer-query-function)
 (setq kill-buffer-query-functions nil)
 
+;; Set the C-mode's tab to 4 spaces.
+(setq c-basic-offset 4)
+
 (provide 'settings)

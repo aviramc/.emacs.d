@@ -71,4 +71,12 @@
 
 (global-set-key (kbd "C-c r") 'revert-buffer)
 
+(global-set-key (kbd "M-3") 'comment-region)
+(global-set-key (kbd "M-#") 'uncomment-region) ;; This is actually M-S-3
+
+;; C-Mode - When pressing on Enter, the next line should be indented. Also, allow to make a newline without indendation.
+(require 'cc-mode)
+(define-key c-mode-base-map (kbd "RET") 'newline-and-indent) 
+(define-key c-mode-base-map [(shift return)] 'newline)
+
 (provide 'keys)
