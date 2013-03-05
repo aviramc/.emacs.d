@@ -96,4 +96,7 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")
 
+;; Set the C-mode's tab to 4 spaces.
+(setq c-basic-offset 4)
+
 (provide 'settings)
