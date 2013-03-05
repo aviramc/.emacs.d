@@ -46,6 +46,7 @@
 )
 
 ;; Run "xlsfonts | grep courier-medium-r" to view available fonts
+;; For this font, you should install on your machine the the package xfonts-75dpi.
 (set-default-font "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1")
 
 ;; Set the default font for new frames. This is helpful when doing new-frame[-on-display] or when running emacsclient.
