@@ -11,6 +11,7 @@
 (global-set-key [(control tab)] 'other-window)
 (global-set-key [f6] 'switch-to-other-buffer)
 (global-set-key [(control \`)] 'switch-to-other-buffer)
+(global-set-key [(control shift iso-lefttab)] (lambda () (interactive) (other-window -1)))
 (global-set-key [(control z)] 'undo)
 (global-set-key [(control b)] 'ido-switch-buffer)
 (global-set-key [(control f)] 'ido-find-file)
@@ -78,5 +79,10 @@
 (require 'cc-mode)
 (define-key c-mode-base-map (kbd "RET") 'newline-and-indent) 
 (define-key c-mode-base-map [(shift return)] 'newline)
+
+(fset 'python-breakpoint
+   [up end return ?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\) down])
+
+(define-key python-mode-map (kbd "C-c C-b") 'python-breakpoint)
 
 (provide 'keys)
