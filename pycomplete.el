@@ -3,6 +3,8 @@
 ;;; See pycomplete.py for the Python side of things and a short description
 ;;; of what to expect.
 
+(defvaralias 'python-mode-map 'py-mode-map)
+
 (require 'pymacs)
 (require 'python-mode)
 

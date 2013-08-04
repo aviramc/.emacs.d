@@ -20,6 +20,7 @@
 
 (require 'settings)
 (require 'marks)
+(defvaralias 'python-mode-map 'py-mode-map)
 (require 'python-mode)
 (require 'ido)
 (require 'pc-select)
@@ -43,6 +44,14 @@
 
 ;; Turn off bell alarms
 (setq ring-bell-function 'ignore)
+
+;; Turn off welcome screen
+(setq inhibit-startup-message t)
+
+;; Set a nice scratch message
+(setq initial-scratch-message ";; welcome, h4x0r.
+
+")
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)

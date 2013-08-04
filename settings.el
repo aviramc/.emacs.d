@@ -47,11 +47,12 @@
 
 ;; Run "xlsfonts | grep courier-medium-r" to view available fonts
 ;; For this font, you should install on your machine the the package xfonts-75dpi.
-(set-default-font "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1")
+;(set-default-font "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1")
+(set-default-font "DejaVu Sans Mono-14")
 
 ;; Set the default font for new frames. This is helpful when doing new-frame[-on-display] or when running emacsclient.
 (add-to-list 'default-frame-alist
-             '(font . "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1"))
+             '(font . "DejaVu Sans Mono-14"))
 
 ;; Shell mode
 (setq ansi-color-names-vector ; better contrast colors
