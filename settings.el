@@ -99,4 +99,7 @@
 ;; Set the C-mode's tab to 4 spaces.
 (setq c-basic-offset 4)
 
+;; Show the current function in the mode line.
+(which-function-mode 1)
+
 (provide 'settings)
