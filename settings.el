@@ -21,37 +21,38 @@
  '(indent-tabs-mode nil)
  '(global-font-lock-mode t nil (font-lock))
  '(efs-use-passive-mode t))
-(custom-set-faces
- '(default ((t (:foreground "White" :background "black" :size "14t"))))
+;(custom-set-faces
+; '(default ((t (:foreground "White" :background "black" :size "14t"))))
 ; '(custom-button-face ((t (:bold t :foreground "#3fdfcf"))))
 ; '(custom-group-tag-face ((t (:underline t :foreground "blue"))))
 ; '(custom-saved-face ((t (:underline t :foreground "orange"))))
 ; '(custom-state-face ((t (:foreground "green3"))))
 ; '(custom-variable-button-face ((t (:bold t :underline t :foreground "white"))))
- '(font-lock-comment-face ((t (:foreground "gray"))))
- '(font-lock-doc-string-face ((t (:foreground "cyan"))))
- '(font-lock-function-name-face ((t (:foreground "forestgreen" :bold t))))
- '(font-lock-keyword-face ((t (:foreground "orange"))))
- '(font-lock-preprocessor-face ((t (:foreground "deepskyblue" :bold t))))
- '(font-lock-reference-face ((t (:foreground "orangered"))))
- '(font-lock-string-face ((t (:foreground "cyan"))))
- '(font-lock-type-face ((t (:foreground "green3" :bold t))))
- '(font-lock-variable-name-face ((t (:foreground "gold" :bold t))))
- '(font-lock-warning-face ((t (:foreground "yellow"  :bold t))))
- '(highlight ((t (:foreground "red3" :background "white"))) t)
- '(isearch ((t (:foreground "red" :background "lightslategray"))) t)
- '(lazy-highlight ((t (:foreground "red" ))) t)
- '(text-cursor ((t (:foreground "white" :background "red"))) t)
- '(region ((t (:background "skyblue4"))) t)
-)
+; '(font-lock-comment-face ((t (:foreground "gray"))))
+; '(font-lock-doc-string-face ((t (:foreground "cyan"))))
+; '(font-lock-function-name-face ((t (:foreground "forestgreen" :bold t))))
+; '(font-lock-keyword-face ((t (:foreground "orange"))))
+; '(font-lock-preprocessor-face ((t (:foreground "deepskyblue" :bold t))))
+; '(font-lock-reference-face ((t (:foreground "orangered"))))
+; '(font-lock-string-face ((t (:foreground "cyan"))))
+; '(font-lock-type-face ((t (:foreground "green3" :bold t))))
+; '(font-lock-variable-name-face ((t (:foreground "gold" :bold t))))
+; '(font-lock-warning-face ((t (:foreground "yellow"  :bold t))))
+; '(highlight ((t (:foreground "red3" :background "white"))) t)
+; '(isearch ((t (:foreground "red" :background "lightslategray"))) t)
+; '(lazy-highlight ((t (:foreground "red" ))) t)
+; '(text-cursor ((t (:foreground "white" :background "red"))) t)
+; '(region ((t (:background "skyblue4"))) t)
+;)
 
 ;; Run "xlsfonts | grep courier-medium-r" to view available fonts
 ;; For this font, you should install on your machine the the package xfonts-75dpi.
-(set-default-font "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1")
+;(set-default-font "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1")
+(set-default-font "DejaVu Sans Mono-14")
 
 ;; Set the default font for new frames. This is helpful when doing new-frame[-on-display] or when running emacsclient.
 (add-to-list 'default-frame-alist
-             '(font . "-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1"))
+             '(font . "DejaVu Sans Mono-14"))
 
 ;; Shell mode
 (setq ansi-color-names-vector ; better contrast colors
