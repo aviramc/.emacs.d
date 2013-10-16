@@ -56,11 +56,6 @@
 (global-set-key "\M-g" 'goto-line)
 (global-set-key [(control meta b)] 'toggle-truncate-lines)
 
-(require 'python-mode)
-
-;; Undo the idiotic Python C-backspace, this will be set back to default
-(define-key python-mode-map [(control backspace)] nil)
-
 ;; Smarter shell completion
 (define-key shell-mode-map [(control up)] 'comint-previous-matching-input-from-input)
 (define-key shell-mode-map [(control down)] 'comint-next-matching-input-from-input)
@@ -83,6 +78,26 @@
 (fset 'python-breakpoint
    [up end return ?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\) down])
 
-(define-key python-mode-map (kbd "C-c C-b") 'python-breakpoint)
+(require 'python-mode)
+
+;; Undo the idiotic Python C-backspace, this will be set back to default
+(define-key py-mode-map [(control backspace)] nil)
+(define-key py-mode-map (kbd "C-c C-b") 'python-breakpoint)
+
+;; C-Scope keys
+(define-key c-mode-base-map (kbd "C-c g") 'cscope-find-global-definition)
+(define-key c-mode-base-map (kbd "C-c x") 'cscope-find-functions-calling-this-function)
+
+(defun scroll-up-one-line()
+  (interactive)
+  (scroll-up 1))
+
+(defun scroll-down-one-line()
+  (interactive)
+  (scroll-down 1))
+
+;; XXX overriding default emacs binding?
+(global-set-key [(control meta up)] 'scroll-down-one-line)
+(global-set-key [(control meta down)] 'scroll-up-one-line)
 
 (provide 'keys)
