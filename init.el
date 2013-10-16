@@ -20,6 +20,7 @@
 
 (require 'settings)
 (require 'marks)
+(defvaralias 'python-mode-map 'py-mode-map)
 (require 'python-mode)
 (require 'ido)
 (require 'pc-select)
