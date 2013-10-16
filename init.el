@@ -28,6 +28,13 @@
 (require 'lua-mode)
 (require 'git)
 (require 'internet-search)
+(require 'xcscope)
+
+;; Mercurial mode files. We have them in our repository, but:
+;;   - mercurial.el is distributed with Mercurial.
+;;   - ahg.el is from https://bitbucket.org/agriggio/ahg/
+(require 'mercurial)
+(require 'ahg)
 
 (ido-mode t)
 (font-lock-mode)
