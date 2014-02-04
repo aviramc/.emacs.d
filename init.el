@@ -54,3 +54,8 @@
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
+
+;; Oren Zomer's prettify!
+(require 'pymacs)
+
+(pymacs-load "pyaddons" "")
