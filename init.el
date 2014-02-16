@@ -52,10 +52,12 @@
 ;; Turn off bell alarms
 (setq ring-bell-function 'ignore)
 
-;; Load keys the last, in order to override bad key bindings
-(require 'keys)
 
 ;; Oren Zomer's prettify!
 (require 'pymacs)
 
+(setq pymacs-load-path (list "~/.emacs.d"))
 (pymacs-load "pyaddons" "")
+
+;; Load keys the last, in order to override bad key bindings
+(require 'keys)
