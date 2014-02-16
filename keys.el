@@ -100,4 +100,6 @@
 (global-set-key [(control meta up)] 'scroll-down-one-line)
 (global-set-key [(control meta down)] 'scroll-up-one-line)
 
+(global-set-key (kbd "C-c C-q") 'prettify)
+
 (provide 'keys)
