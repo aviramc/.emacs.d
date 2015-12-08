@@ -54,6 +54,8 @@
 ;; Turn off bell alarms
 (setq ring-bell-function 'ignore)
 
+;; Remove toolbar
+(tool-bar-mode -1)
 
 ;; Oren Zomer's prettify!
 (require 'pymacs)
