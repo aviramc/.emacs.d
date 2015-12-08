@@ -21,8 +21,9 @@
 
 (require 'settings)
 (require 'marks)
-(defvaralias 'python-mode-map 'py-mode-map)
+;;(defvaralias 'python-mode-map 'py-mode-map)
 (require 'python-mode)
+;;(python-mode-v5-behavior-p-on)
 (require 'ido)
 (require 'pc-select)
 (require 'quick-yes)
@@ -57,8 +58,8 @@
 ;; Oren Zomer's prettify!
 (require 'pymacs)
 
-(setq pymacs-load-path (list "~/.emacs.d"))
-(pymacs-load "pyaddons" "")
+;;(setq pymacs-load-path (list "~/.emacs.d"))
+;;(pymacs-load "pyaddons" "")
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
