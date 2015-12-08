@@ -73,7 +73,8 @@
 
 ;; Set C-x c to quit, not C-x C-c
 (global-set-key [(control x) (control c)] (defun dont-kill-emacs() (interactive) (message "Use C-x c to leave emacs")))
-(global-set-key [(control x) c] 'save-buffers-kill-emacs)
+(global-set-key [(control x) c] 'save-buffers-kill-terminal)
+(global-set-key "\C-xc" 'save-buffers-kill-terminal)
 
 ;; Colors displayed by diff mode.
 (defun update-diff-colors ()

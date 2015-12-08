@@ -5,8 +5,6 @@
 (require 'user-macros)
 (require 'custom-functions)
 
-(global-set-key "\C-xc" 'save-buffers-kill-emacs)
-
 (global-set-key [pause] 'kill-this-buffer)
 (global-set-key [(control tab)] 'other-window)
 (global-set-key [f6] 'switch-to-other-buffer)
