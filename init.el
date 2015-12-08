@@ -14,6 +14,7 @@
 	(crs-add-to-load-path (cdr path-string)))))
 
 (add-to-load-path (expand-file-name "~/.emacs.d"))
+(add-to-load-path (expand-file-name "~/.emacs.d/dockerfile-mode"))
 (add-to-load-path (expand-file-name "/usr/share/emacs/site-lisp/python-mode"))
 
 (setq backup-directory-alist `(("." . "~/.emacs.d/saves")))
@@ -61,3 +62,8 @@
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
+
+(require 'dockerfile-mode)
+
+(defvaralias 'last-command-char 'last-command-event)
+
