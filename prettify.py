@@ -49,7 +49,6 @@ def prettify(string):
     
     inner_seq = ['']
     for token in _prettify_special_char_re.split(string.lstrip()):
-        print "bbbbb", token
         if string_open_token is None:
             if token in ('\n', ' '):
                 continue
