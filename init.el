@@ -57,11 +57,10 @@
 ;; Remove toolbar
 (tool-bar-mode -1)
 
-;; Oren Zomer's prettify!
 (require 'pymacs)
 
-;;(setq pymacs-load-path (list "~/.emacs.d"))
-;;(pymacs-load "pyaddons" "")
+;; Oren Zomer's prettify!
+(pymacs-load "prettify" "")
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
@@ -69,4 +68,5 @@
 (require 'dockerfile-mode)
 
 (defvaralias 'last-command-char 'last-command-event)
+
 
