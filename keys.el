@@ -45,6 +45,15 @@
 (global-set-key [(meta shift right)] 'forward-sexp-mark)
 (global-set-key [(meta backspace)] 'backward-kill-word)    ;; Don't deleting the entire sexp; too harmful...
 
+;; More convenient mark bindings (we override C-SPC later on)
+(global-set-key (kbd "C-c m") 'set-mark-command)
+(global-set-key (kbd "C-c C-m") 'set-mark-command)
+;; C-x C-x will exchange point with the mark, here we also highlight it.
+(global-set-key (kbd "C-S-x C-S-x") 'exchange-point-and-mark)
+(global-set-key (kbd "C-x <up>") 'pop-to-mark-command)
+(global-set-key (kbd "C-x C-<up>") 'pop-to-mark-command)
+
+
 (global-set-key [(control meta left)] 'next-buffer)
 (global-set-key [(control meta right)] 'previous-buffer)
 (global-set-key [(f1)] 'man)
