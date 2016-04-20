@@ -60,6 +60,7 @@
 (require 'pymacs)
 
 ;; Oren Zomer's prettify!
+(setq pymacs-load-path (list "~/.emacs.d"))
 (pymacs-load "prettify" "")
 
 ;; Load keys the last, in order to override bad key bindings
