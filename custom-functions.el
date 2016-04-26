@@ -18,4 +18,29 @@
   (shell-command-on-region start end command t t)
 )
 
+; C language - insert header guard.
+; Greatly inspired by (i.e. copied from) https://www.emacswiki.org/emacs/AutoInsertHeaderGuards
+(defun c-insert-header-guard ()
+  (interactive)
+  (if (buffer-file-name)
+      (let*
+          ((name (upcase (file-name-nondirectory (file-name-sans-extension buffer-file-name))))
+           (guard-name (concat "__" name "_H__"))
+           (start-guard (concat "#ifndef " guard-name "\n#define " guard-name "\n"))
+           (end-guard (concat "\n#endif /* " guard-name "*/\n"))
+           (begin (point-marker))
+           )
+        (progn
+  	  ;Insert the Header Guard
+          (goto-char (point-min))
+          (insert start-guard)
+          (goto-char (point-max))
+          (insert end-guard)
+          (goto-char begin))
+      )
+      ;else
+      (message (concat "Buffer " (buffer-name) " must have a filename"))
+  )
+)
+
 (provide 'custom-functions)

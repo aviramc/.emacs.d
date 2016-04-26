@@ -94,6 +94,7 @@
 ;; C-Scope keys
 (define-key c-mode-base-map (kbd "C-c g") 'cscope-find-global-definition)
 (define-key c-mode-base-map (kbd "C-c x") 'cscope-find-functions-calling-this-function)
+(define-key c-mode-base-map (kbd "C-c h") 'c-insert-header-guard)
 
 (defun scroll-up-one-line()
   (interactive)
