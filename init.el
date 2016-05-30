@@ -32,12 +32,18 @@
 (require 'git)
 (require 'internet-search)
 (require 'xcscope)
+(require 'camelize)
 
 ;; Mercurial mode files. We have them in our repository, but:
 ;;   - mercurial.el is distributed with Mercurial.
 ;;   - ahg.el is from https://bitbucket.org/agriggio/ahg/
 (require 'mercurial)
 (require 'ahg)
+
+;; Java module - JDEE. This is a bit old, but works fine.
+(if (file-exists-p "~/.emacs.d/jdee/lisp")
+    (progn (add-to-list 'load-path "~/.emacs.d/jdee/lisp")
+           (load "jde")))
 
 (ido-mode t)
 (font-lock-mode)

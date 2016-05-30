@@ -110,4 +110,8 @@
 
 (global-set-key (kbd "C-c C-q") 'prettify)
 
+; Camelize
+(global-set-key (kbd "C-C <up>") 'camelize-var)
+
+
 (provide 'keys)
