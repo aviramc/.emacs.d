@@ -103,4 +103,7 @@
 ;; Show the current function in the mode line.
 (which-function-mode 1)
 
+;; When in text mode, proper line size should be 80.
+(setq-default fill-column 80)
+
 (provide 'settings)
