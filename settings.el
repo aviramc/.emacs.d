@@ -106,4 +106,7 @@
 ;; When in text mode, proper line size should be 80.
 (setq-default fill-column 80)
 
+;; Reload a tags file without querying
+(setq tags-revert-without-query 1)
+
 (provide 'settings)
