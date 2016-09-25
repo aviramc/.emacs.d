@@ -69,6 +69,8 @@
 (setq pymacs-load-path (list "~/.emacs.d"))
 (pymacs-load "prettify" "")
 
+(require 'fontsize)
+
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
 

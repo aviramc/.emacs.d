@@ -52,6 +52,7 @@
 (global-set-key (kbd "C-S-x C-S-x") 'exchange-point-and-mark)
 (global-set-key (kbd "C-x <up>") 'pop-to-mark-command)
 (global-set-key (kbd "C-x C-<up>") 'pop-to-mark-command)
+(global-set-key (kbd "M-<up>") 'pop-to-mark-command)
 
 
 (global-set-key [(control meta left)] 'next-buffer)
@@ -113,5 +114,10 @@
 ; Camelize
 (global-set-key (kbd "C-C <up>") 'camelize-var)
 
+; Change font sizes, will be C-S 6, 7, 8, 9, for each size
+(global-set-key (kbd "C-^") 'font-to-default)
+(global-set-key (kbd "C-&") 'font-for-single-screen-dev)
+(global-set-key (kbd "C-*") 'font-for-display)
+(global-set-key (kbd "C-(") 'font-extra-large)
 
 (provide 'keys)
