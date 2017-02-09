@@ -120,4 +120,6 @@
 (global-set-key (kbd "C-*") 'font-for-display)
 (global-set-key (kbd "C-(") 'font-extra-large)
 
+(global-set-key (kbd "C-<return>") 'find-file-at-point)
+
 (provide 'keys)
