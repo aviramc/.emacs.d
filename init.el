@@ -15,15 +15,11 @@
 
 (add-to-load-path (expand-file-name "~/.emacs.d"))
 (add-to-load-path (expand-file-name "~/.emacs.d/dockerfile-mode"))
-(add-to-load-path (expand-file-name "/usr/share/emacs/site-lisp/python-mode"))
 
 (setq backup-directory-alist `(("." . "~/.emacs.d/saves")))
 
 (require 'settings)
 (require 'marks)
-;;(defvaralias 'python-mode-map 'py-mode-map)
-(require 'python-mode)
-;;(python-mode-v5-behavior-p-on)
 (require 'ido)
 (require 'pc-select)
 (require 'quick-yes)
