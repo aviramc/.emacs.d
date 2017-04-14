@@ -26,9 +26,19 @@
 (require 'newshell)
 (require 'lua-mode)
 (require 'git)
+(require 'git-blame)
 (require 'internet-search)
 (require 'xcscope)
 (require 'camelize)
+(require 'dockerfile-mode)
+
+(autoload 'zop-to-char "zop-to-char.el" nil t)
+(autoload 'zop-up-to-char "zop-to-char.el" nil t)
+
+(require 'bash-completion)
+(bash-completion-setup)
+;; Don't add spaces on partial completions of paths
+(set 'bash-completion-nospace t)
 
 ;; Mercurial mode files. We have them in our repository, but:
 ;;   - mercurial.el is distributed with Mercurial.
@@ -69,8 +79,6 @@
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
-
-(require 'dockerfile-mode)
 
 (defvaralias 'last-command-char 'last-command-event)
 
