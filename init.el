@@ -46,11 +46,6 @@
 (require 'mercurial)
 (require 'ahg)
 
-;; Java module - JDEE. This is a bit old, but works fine.
-(if (file-exists-p "~/.emacs.d/jdee/lisp")
-    (progn (add-to-list 'load-path "~/.emacs.d/jdee/lisp")
-           (load "jde")))
-
 (ido-mode t)
 (font-lock-mode)
 (pc-selection-mode)
@@ -66,16 +61,9 @@
 ;; Turn off bell alarms
 (setq ring-bell-function 'ignore)
 
-;; Remove toolbar
+;; Remove toolbar and scrollbar
 (tool-bar-mode -1)
-
-(require 'pymacs)
-
-;; Oren Zomer's prettify!
-(setq pymacs-load-path (list "~/.emacs.d"))
-(pymacs-load "prettify" "")
-
-(require 'fontsize)
+(scroll-bar-mode -1)
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
