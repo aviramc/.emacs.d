@@ -86,11 +86,8 @@
 (fset 'python-breakpoint
    [up end return ?i ?m ?p ?o ?r ?t ?  ?p ?d ?b ?\; ?  ?p ?d ?b ?. ?s ?e ?t ?_ ?t ?r ?a ?c ?e ?\( ?\) down])
 
-(require 'python-mode)
-
-;; Undo the idiotic Python C-backspace, this will be set back to default
-(define-key py-mode-map [(control backspace)] nil)
-(define-key py-mode-map (kbd "C-c C-b") 'python-breakpoint)
+(require 'python)
+(define-key python-mode-map (kbd "C-c C-b") 'python-breakpoint)
 
 ;; C-Scope keys
 (define-key c-mode-base-map (kbd "C-c g") 'cscope-find-global-definition)
@@ -121,5 +118,21 @@
 (global-set-key (kbd "C-(") 'font-extra-large)
 
 (global-set-key (kbd "C-<return>") 'find-file-at-point)
+
+;; Visual zap to/up to char
+(global-set-key (kbd "C-c z") 'zop-to-char)
+(global-set-key (kbd "C-c C-z") 'zop-to-char)
+(global-set-key (kbd "C-x z") 'zop-up-to-char)
+(global-set-key (kbd "C-x C-z") 'zop-up-to-char) ;; XXX: run-over emacs's minimize binding
+
+;; AnsiTerm is another option for a shell that can run htop and screen.
+;; Better for using when in need for advanced completion.
+;; The most important keys to know there are C-c j and C-c k which switch editing modes.
+(global-set-key (kbd "C-c t") 'ansi-term)
+(global-set-key (kbd "C-c C-t") 'ansi-term)
+
+;; Find a file with an actual find command and a window
+(global-set-key (kbd "C-c f") 'find-name-dired)
+(global-set-key (kbd "C-c C-f") 'find-name-dired)
 
 (provide 'keys)
