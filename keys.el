@@ -111,12 +111,6 @@
 ; Camelize
 (global-set-key (kbd "C-C <up>") 'camelize-var)
 
-; Change font sizes, will be C-S 6, 7, 8, 9, for each size
-(global-set-key (kbd "C-^") 'font-to-default)
-(global-set-key (kbd "C-&") 'font-for-single-screen-dev)
-(global-set-key (kbd "C-*") 'font-for-display)
-(global-set-key (kbd "C-(") 'font-extra-large)
-
 (global-set-key (kbd "C-<return>") 'find-file-at-point)
 
 ;; Visual zap to/up to char
